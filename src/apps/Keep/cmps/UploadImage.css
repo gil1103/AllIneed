@@ -1,0 +1,15 @@
+.image-upload {
+	cursor: pointer;
+	margin: 0 3px;
+	display: flex;
+	align-items: center;
+}
+
+.image-upload.onMainMenu {
+	position: absolute;
+}
+
+.image-upload label {
+	display: flex;
+	cursor: pointer;
+}

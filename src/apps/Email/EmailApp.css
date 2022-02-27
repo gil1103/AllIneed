@@ -1,0 +1,15 @@
+.email-app {
+	height: -webkit-fill-available;
+}
+.search-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	position: relative;
+}
+
+.main-content {
+	display: flex;
+	margin-left: 0.6rem;
+	position: relative;
+}

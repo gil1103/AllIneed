@@ -1,0 +1,11 @@
+@font-face {
+	font-family: ClickerScript;
+	src: url(../../font/Clicker_Script/ClickerScript-Regular.ttf);
+	font-size: 1.1875rem;
+}
+
+@font-face {
+	font-family: Montserrat;
+	src: url(../../font/Montserrat/SourceSansPro-Italic.ttf);
+	font-size: 1.1875rem;
+}

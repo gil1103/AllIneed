@@ -1,0 +1,14 @@
+.sort-by {
+	margin: 0 auto;
+	text-align: center;
+	padding: 0.5rem 0;
+}
+.sort-by select {
+	background-color: unset;
+	border: none;
+	outline: none;
+	font-size: 1.125rem;
+	color: #49555e;
+	font-family: 'Montserrat';
+}
+

@@ -1,0 +1,30 @@
+.addToCalender-container {
+	box-sizing: border-box;
+	padding: 5px 5px 10px;
+	text-align: right;
+	width: 100%;
+}
+
+.addToCalender-btn {
+	box-sizing: border-box;
+	color: rgba(0, 0, 0, 0.87);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	letter-spacing: 0.01785714em;
+	font-family: 'Google Sans', Roboto, Arial, sans-serif;
+	font-size: 0.875rem;
+	font-weight: 500;
+	line-height: 1.25rem;
+	height: 36px;
+	padding: 8px 24px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	outline: none !important;
+	background: transparent;
+	border: solid transparent;
+}
+
+.addToCalender-btn:hover {
+	background-color: rgba(95, 99, 104, 0.039);
+}

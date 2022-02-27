@@ -1,0 +1,61 @@
+.filter {
+	background-color: #f0f5f9;
+	display: flex;
+	align-content: center;
+	height: 2.9rem;
+	margin: 0 auto;
+	border-radius: 0.25rem;
+	padding-right: 6px;
+}
+
+.filter.booksFilter {
+	max-width: 28rem;
+	justify-content: center;
+}
+
+.filter img {
+	padding: 0.8rem 0 0.4rem;
+	margin: 0 0.6rem 0 0.8rem;
+	opacity: 0.8;
+}
+
+input.filter-by-name {
+	width: 15rem;
+	background-color: unset;
+	border: 0;
+	outline: none;
+	margin: 0.6rem 0;
+	font-family: 'Montserrat';
+	font-size: 1.125rem;
+	color: #49555e;
+}
+
+.filter-option {
+	background-color: unset;
+	border: none;
+	outline: none;
+	font-family: 'Montserrat';
+	font-size: 1.125rem;
+	color: #49555e;
+}
+
+@media (max-width: 720px) {
+	.filter {
+		width: 20.6rem;
+		margin: 0 auto;
+		border-radius: 6.25rem;
+		justify-content: flex-start;
+	}
+
+	.filter img {
+		margin-right: 0.75rem;
+	}
+
+	input.filter-by-name {
+		width: 9.5rem;
+	}
+
+	.filter-option {
+		margin-right: 0.5rem;
+	}
+}

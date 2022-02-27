@@ -1,0 +1,42 @@
+.todo-reminder {
+	position: absolute;
+	top: -224px;
+	left: -20px;
+	background-color: #fff;
+	box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+	z-index: 100;
+	border-radius: 4px;
+	transition: opacity 0.218s;
+	font-size: 13px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.todo-reminder.detailed{
+	top: -172px;
+}
+
+.reminder-title {
+	font-size: 14px;
+	padding: 15px;
+	font-family: 'Roboto', arial, sans-serif;
+}
+
+.reminder-form {
+	padding: 0 15px 15px!important;
+	width: 300px;
+}
+
+.reminder-form > * {
+	margin-top: 15px !important;
+	cursor: pointer;
+	padding: 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+hr {
+	margin: 0;
+}
+
+.MuiInputBase-root.reminder-select {
+	color: #3c4043;
+}

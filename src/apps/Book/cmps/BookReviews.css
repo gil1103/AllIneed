@@ -1,0 +1,9 @@
+.book-reviews .reviews-title {
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+}
+
+.reviews-count {
+	margin-left: 0.4rem;
+	color: #0654ba;
+}

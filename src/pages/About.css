@@ -1,0 +1,69 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.about-page {
+	height: 100vh;
+}
+
+.about-container {
+	padding: 0.5rem 1.25rem 0;
+	height: 100%;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(0, 0, 0, 0.726);
+}
+
+.about-header {
+	font-family: 'ClickerScript';
+	margin: 2rem auto;
+	font-size: 5rem;
+}
+
+.preface {
+	padding: 0 1rem 1rem;
+	text-align: center;
+}
+
+p {
+	margin: 0;
+	padding: 0.5rem auto;
+	font-size: 1.125rem;
+	font-weight: 500;
+}
+
+.about-sub-title {
+	padding: 0 1rem;
+	text-align: center;
+}
+
+.about-container ul {
+	text-align: center;
+	list-style: none;
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.github-link {
+	padding: 0 1rem;
+	text-align: center;
+	padding: 38px 0;
+}
+
+.github-link a {
+	font-size: 1.5rem;
+}
+
+@media (max-width: 720px) {
+	.about-page {
+		height: fit-content;
+	}
+	.about-container ul {
+		list-style: inside;
+	}
+	.github-link {
+		padding-bottom: 5rem;
+	}
+}

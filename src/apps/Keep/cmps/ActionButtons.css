@@ -1,0 +1,37 @@
+.actionButtons-container {
+	display: flex;
+	align-content: center;
+	position: relative;
+	flex: 1 0 auto;
+	align-items: center;
+}
+
+.actionButtons-container:not(:last-child) > button {
+	margin: 0 1px;
+}
+.actionButtons-container:last-child > button {
+	margin: 0 0.5px;
+}
+
+.actionButtons-container.detailed {
+	justify-content: left;
+}
+.actionButtons-container.detailed > button {
+	margin: 0 8px;
+}
+
+.closeBtn-container {
+	position: relative;
+	left: 217px;
+}
+
+@media (max-width:720px){
+	.closeBtn-container {
+		left: -8px;
+	}
+}
+
+.closeBtn {
+	margin: auto 0;
+	font-size: 20px;
+}

@@ -1,0 +1,50 @@
+.offcanvas-end {
+	width: 300px;
+	background-color: #52616be0;
+}
+
+.offcanvas-header {
+	justify-content: center;
+}
+
+.offcanvas-title {
+	color: #f0f5f9;
+	font-family: 'Montserrat';
+	font-weight: bold;
+	font-size: 1.8rem;
+}
+
+button.btn-close {
+	display: none;
+}
+
+.navbar {
+	width: fit-content;
+	padding: 0;
+	border-radius: 6px;
+}
+
+.navbar-toggler {
+	padding: 0;
+}
+
+.navbar-nav {
+	align-items: center;
+	padding-left: 1rem;
+}
+
+.nav-link {
+	color: #f0f5f9;
+	border-radius: 5px;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	font-size: 1.5rem;
+	font-family: 'Montserrat';
+	width: -webkit-fill-available;
+	margin-bottom: 7rem;
+	padding: 0.3rem 0.6rem;
+	box-shadow: 2px 5px 3px inset rgba(82, 97, 107, 0.2);
+}

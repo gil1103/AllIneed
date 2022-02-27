@@ -1,0 +1,34 @@
+.book-preview {
+	display: grid;
+	width: 20.5rem;
+	height: 20.5rem;
+	background: #52616b;
+	grid-template-rows: 1fr 4fr 1fr;
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+	padding: 0 1rem;
+	border-radius: 2.5rem;
+	transition: transform 0.8s ease-out;
+}
+
+.book-preview:hover{
+	transform:scale(1.05) ;
+}
+
+.book-title {
+	font-size: 1.125rem;
+	margin: 0.8rem auto;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	justify-content: center;
+	width: -webkit-fill-available;
+}
+
+.book-image {
+	object-fit: fill;
+	height: -webkit-fill-available;
+	max-width: -webkit-fill-available;
+	border-radius: 1rem;
+}

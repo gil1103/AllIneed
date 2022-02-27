@@ -1,0 +1,115 @@
+.email-preview {
+	border: 1px solid rgb(189, 180, 180);
+	padding: 0.5rem;
+	margin-bottom: 0.2rem;
+	transition: all 0.3s ease-in-out;
+	font-weight: 600;
+	display: grid;
+	grid-template-columns: 4fr 1fr;
+	align-items: center;
+	border-radius: 5px;
+	height: 3rem;
+	align-content: center;
+}
+
+.email-body-container {
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+}
+
+.email-from {
+	width: 8rem;
+	white-space: nowrap;
+	font-weight: 600;
+}
+
+.dots {
+	margin-right: 0.6rem;
+}
+.email-subject {
+	text-overflow: ellipsis;
+	min-width: 5rem;
+	max-width: 15rem;
+	white-space: nowrap;
+	overflow: hidden;
+	font-weight: 600;
+	margin-right: 0.6rem;
+}
+
+.email-body-container .email-body {
+	max-width: 15rem;
+	white-space: nowrap;
+	margin-right: 0.6rem;
+	overflow: hidden;
+	font-weight: 300;
+	text-overflow: ellipsis;
+}
+
+.time-and-actions {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.time-and-actions button {
+	display: flex;
+	align-items: center;
+}
+
+.email-preview:hover {
+	box-shadow: inset 1px 1px 8px black;
+	transform: scaleY(1.05);
+	color: black;
+}
+
+.email-preview button {
+	background-color: unset;
+	border: none;
+	cursor: pointer;
+}
+
+.email-preview button img {
+	width: 1.25rem;
+	margin: 0 0.3rem;
+}
+
+.email-preview button img:hover {
+	filter: invert(0.7);
+}
+
+.is-read {
+	background-color: #68737a;
+}
+
+@media (max-width: 800px) {
+	.email-preview {
+		grid-template-columns: 2fr 1fr;
+		height: 6rem;
+	}
+
+	.email-body-container {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.email-preview .email-body {
+		overflow: hidden;
+		white-space: nowrap;
+	}
+
+	.time-and-actions {
+		overflow: hidden;
+		white-space: nowrap;
+		justify-content: space-between;
+	}
+
+	.time-and-actions button {
+		padding: 1px;
+	}
+
+	.email-preview button img {
+		margin: 0;
+	}
+}

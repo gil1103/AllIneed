@@ -1,0 +1,34 @@
+.home-page {
+	background-image: url('../assets/image/inspiration.jpg');
+	display: flex;
+	align-content: stretch;
+	height: 79vh;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	margin: 0;
+	text-align: center;
+	justify-content: center;
+}
+
+.title-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 4%;
+}
+
+.title-container h1 {
+	font-size: 5rem;
+	margin: 0;
+	font-family: ClickerScript;
+}
+.title-container h2 {
+	font-family: ClickerScript;
+}
+
+@media (max-width: 720px) {
+	.title-container {
+		padding-left: 8%;
+	}
+}

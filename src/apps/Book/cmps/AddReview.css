@@ -1,0 +1,99 @@
+.review-form {
+	padding: 1rem;
+}
+
+.review-form .rate-and-review {
+	text-transform: uppercase;
+	color: #4a4a4a;
+	font-size: 17px;
+}
+
+.review-form .addreview-book-title {
+	display: block;
+	font-size: 24px;
+	line-height: 121%;
+	margin-bottom: 18px;
+	font-weight: 400;
+	color: #4a4a4a;
+}
+
+.rate-container {
+	display: flex;
+	align-items: center;
+}
+
+.rate-container .rate-product {
+	font-size: 20px;
+	color: #535353;
+	margin: 0;
+	display: inline-block;
+	font-weight: 400;
+}
+
+.rate-container .stars-container {
+	list-style: none;
+	display: flex;
+	margin: 0;
+}
+
+.fullname-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.fullname-container label {
+	margin-top: 20px;
+}
+.fullname-container input,
+.product-review-container input {
+	border-radius: 2px;
+	width: 24%;
+	font-weight: 400;
+	border-style: solid;
+	border-width: 1px;
+	font-size: 1em;
+	height: 40px;
+	margin-bottom: 7px;
+	margin-top: 15px;
+}
+
+.product-review-container {
+	margin-top: 15px;
+	border-radius: 3px;
+	display: flex;
+	flex-direction: column;
+}
+
+.product-review-container textarea {
+	height: 4em;
+	width: 65%;
+	margin-top: 15px;
+}
+
+.addReview-action-btns {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.cancel-addReview {
+	text-decoration: none;
+	margin-right: 20px;
+	color: #0456ba;
+}
+
+.add-review-btn {
+	padding: 0.75rem 5rem;
+	width: 30px;
+	height: 40px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 400;
+	background-color: #0654ba;
+	border: none;
+	border-radius: 4px;
+	color: #fff;
+}

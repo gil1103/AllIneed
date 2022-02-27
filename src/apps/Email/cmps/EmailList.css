@@ -1,0 +1,32 @@
+.emails-container {
+	padding: 0 0.3rem 0 0.3rem;
+	margin: 0;
+	margin-left: 0.3rem;
+	flex-grow: 1;
+	overflow-y: scroll;
+	margin-right: 0.6rem;
+	max-height: 65vh;
+}
+
+.emails-container::-webkit-scrollbar {
+	width: 0.7em;
+}
+
+.emails-container::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.emails-container::-webkit-scrollbar-thumb {
+	background: linear-gradient(#68737a, #c9d6df, #68737a);
+	border-radius: 10px;
+}
+
+.emails-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.emails-list a {
+	text-decoration: none;
+	color: black;
+}

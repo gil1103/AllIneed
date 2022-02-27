@@ -1,0 +1,21 @@
+.footer {
+	height: 9.5vh;
+	background-color: #52616b;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+		position:fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+}
+
+@media (min-width:720px){
+	.footer{
+		position:fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
+}

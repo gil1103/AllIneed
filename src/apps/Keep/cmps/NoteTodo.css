@@ -1,0 +1,242 @@
+.note-todo {
+	margin: 16px;
+	border-radius: 8px;
+	border: 1px solid #52616b;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* overflow-y: auto; */
+	width: 250px;
+	transition: all 0.5s ease-out;
+}
+
+.note-todo:hover{
+	box-shadow: 1px 2px 20px 11px rgb(60 64 67 / 30%), 1px 2px 7px 3px rgb(60 64 67 / 15%);
+}
+
+.note-todo.detailed {
+	width: 600px;
+	align-items: flex-start;
+	/* overflow-x: hidden; */
+	position: fixed;
+	margin: 0 26%;
+	z-index: 300;
+}
+
+@media (max-width: 720px) {
+	.note-todo {
+		margin: 0;
+	}
+	.note-todo.detailed {
+		width: 100%;
+		left: 0 !important;
+		margin: 0;
+	}
+}
+
+.note-todo .media_canvas-container {
+	display: flex;
+	padding-bottom: 0.3rem;
+	flex-direction: column;
+	width: 100%;
+	position: relative;
+	/* overflow-y: auto; */
+	max-height: 636px;
+	transition: opacity 0.218s ease-in;
+	border-radius: 8px 8px 0 0;
+}
+
+.media_canvas-container .media_canvas {
+	display: flex;
+	position: relative;
+}
+
+.media-container {
+	order: 1;
+	height: 100%;
+}
+
+.media-container .uploaded-img {
+	width: 100%;
+	height: 100%;
+	background-clip: padding-box;
+	border: solid transparent;
+	border-radius: 8px 0 0 0;
+}
+
+.media-container .remove-media {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+	left: 241px;
+}
+
+.media-container .remove-media:hover {
+	color: black;
+	background-color: transparent;
+}
+
+.media_canvas .remove-canvas {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+	right: 7px;
+}
+
+.media_canvas .remove-canvas:hover {
+	color: black;
+	background-color: transparent;
+}
+
+.media_canvas .canvas-img {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: rgba(0, 0, 0, 0.2);
+	order: 2;
+	background-clip: padding-box;
+	border: solid transparent;
+	border-radius: 0 8px 0 0;
+}
+
+.note-todo-title {
+	background-color: inherit;
+	overflow-y: hidden;
+	resize: none;
+	outline: none;
+	border: 0px;
+	width: 100%;
+}
+
+.media_canvas-container .checkbox {
+	height: 18px;
+	opacity: 0.54;
+	outline: none;
+	width: 18px;
+	top: 8px;
+}
+
+.media_canvas-container ul > li {
+	display: flex;
+	align-items: flex-start;
+	position: relative;
+}
+
+.delete-icon {
+	right: -14px;
+	top: -5px;
+}
+
+.todo-list-container {
+	padding: 12px 16px 0 16px;
+}
+
+.note-todo-title {
+	letter-spacing: 0.00625em;
+	font-family: 'Google Sans', Roboto, Arial, sans-serif;
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 1.5rem;
+	margin: 0;
+	padding-bottom: 10px;
+	padding-right: 10px;
+}
+
+.empty-note {
+	color: #80868b;
+	font-family: 'Google Sans', Roboto, Arial, sans-serif;
+	font-size: 1.375rem;
+	font-weight: 400;
+	letter-spacing: 0;
+	line-height: 1.75rem;
+}
+
+.pin {
+	opacity: 0.5;
+	height: 26px;
+	width: 26px;
+	padding: 4px;
+	border-radius: 16px;
+	transition: background-color 0.5s ease-in;
+	position: absolute;
+	right: 24px;
+	top: 6px;
+	z-index: 200;
+	transition: opacity 0.218s ease-in;
+}
+
+.pin:hover {
+	background-color: rgba(95, 99, 104, 0.157);
+	opacity: 1;
+}
+
+.note-todo ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.note-todo ul label {
+	padding-left: 10px;
+}
+
+.action-button-placeholder {
+	height: 45px;
+}
+
+.note-todo .checked {
+	text-decoration: line-through;
+}
+
+.listItems-container {
+	display: flex;
+}
+
+.list-item {
+	width: 100%;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	position: relative;
+	top: -5px;
+	left: 8px;
+	min-height: 24px;
+	border: 0;
+	outline: none;
+	transition: transform-all 3s ease-in;
+	background-color: inherit;
+	overflow-y: hidden;
+	height: -webkit-fill-available;
+	resize: none;
+}
+
+.new-todo-input {
+	border: 0;
+	outline: none;
+	transition: transform-all 3s ease-in;
+	width: 100%;
+}
+
+.action-button-container {
+	box-shadow: 0 -2px 5px rgb(0 0 0 / 20%);
+	width: inherit;
+	height: 45px;
+	display: flex;
+	align-items: center;
+}
+
+.note-todo:hover .action-button-container.notDetailed {
+	animation: fade_in_show 0.5s;
+}
+
+@keyframes fade_in_show {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
