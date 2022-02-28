@@ -122,13 +122,12 @@ export const ActionButtons = ({note, title, items, noteId, isImage, uploadedImag
         </IconButton>
       </Tooltip>
 
-
       {isFormOpen && <ReminderForm title={title} isDetailed={isDetailed} bodyStr={bodyStr} closeForm={onCloseForm} />}
       {isShareOpen && <ShareButtons title={title} isDetailed={isDetailed} bodyStr={bodyStr} />}
       {isModifyBg && <ColorPicker isDetailed={isDetailed} noteId={noteId} />}
       <UploadImage noteId={currentNoteId} note={note} isBgImage={isBgImage} isImageLoad={isImageLoad} />
       {isDrawMenuOpen && <CanvasDrawing scrollCanvasToView={scrollCanvasToView} noteId={noteId} isDetailed={isDetailed} uploadedImage={uploadedImage} />}
-      <LongMenu noteId={noteId} updateNotesList={updateNotesList} />
+      <LongMenu noteId={noteId} isDetailed={isDetailed} updateNotesList={updateNotesList} />
       {isDetailed && <IconButton className="closeBtn-container" onClick={() => closeDetailedMenu()}>
         <div className="closeBtn">Close</div>
       </IconButton>}

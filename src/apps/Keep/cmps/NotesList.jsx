@@ -116,7 +116,7 @@ export const NotesList = (props) => {
   return (
     <section >
       <div className="notes-list" style={{height: `${ notesListHeight }px`}}>
-        {pinnedNotes.length > 0 && <h1 className="pinned-title" style={{left: `${ marginLeft }px`}}>PINNED</h1>}
+        {pinnedNotes.length > 0 && <h1 className="pinned-title" style={{left: `${ 0.8*marginLeft }px`}}>PINNED</h1>}
         <div className="pinnedNote-container" >
           {pinnedNotes.map((note, index) => {
             const pinnedNoteHeight = pinnedHeightArr[index]?.stackingH;
@@ -132,7 +132,7 @@ export const NotesList = (props) => {
           })}
         </div>
         {unpinnedNotes.length > 0 && <h1 className="unpinned-title"
-          style={{transform: `translate(${ marginLeft }px, ${ pinnedContainerHeight }px)`}} >OTHERS</h1>}
+          style={{transform: `translate(${ 0.8 *marginLeft }px, ${ pinnedContainerHeight }px)`}} >OTHERS</h1>}
         <div className="unpinnedNote-container"
           style={{transform: `translate(${ 0 }px, ${ pinnedContainerHeight }px)`}}>
           {unpinnedNotes.map((note, index) => {

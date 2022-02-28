@@ -1,0 +1,10 @@
+.longMenu {
+	position: absolute;
+	right: 2px;
+	margin: auto 0;
+}
+
+.longMenu.detailed {
+  position: initial;
+}
+

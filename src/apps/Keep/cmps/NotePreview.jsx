@@ -16,14 +16,14 @@ export const NotePreview = React.forwardRef((props, ref) => {
   const itemsPerRow = 3;
   const pinnedNotesTopMargin = 40;
   const unpinnedNotesTopMargin = 40;
-  const horizontalGap = 40;
+  const horizontalGap = Math.round(windowWidth/13);
   // const {type} = note; //todo add filter by type
   // const {isPinned} = note;
   const pinnedRowsCount = Math.ceil((pinnedNoteIdx + 1) / itemsPerRow); //starts at 1
   const unpinnedRowsCount = Math.ceil((notPinnedNoteIdx + 1) / itemsPerRow); //starts at 1
   const pinnedColumnCount = (pinnedNoteIdx) % itemsPerRow;
   const unpinnedColumnCount = (notPinnedNoteIdx) % itemsPerRow;
-  const marginLeft = 0.5 * (windowWidth - (itemsPerRow * noteDimentions?.noteWidth + horizontalGap * (itemsPerRow - 1)));
+  const marginLeft = 1.2*(0.5 * (windowWidth - ((itemsPerRow * noteDimentions?.noteWidth) + (horizontalGap * (itemsPerRow - 1)))));
 
   const calculateTransX = useCallback(() => {
     if (note.isPinned) {

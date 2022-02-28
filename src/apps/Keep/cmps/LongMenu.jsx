@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { keepService } from '../services/keepService';
+import {keepService} from '../services/keepService';
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import './LongMenu.css'
 
 const options = [
   'delete',
@@ -25,20 +26,20 @@ const options = [
 
 const ITEM_HEIGHT = 48;
 
-export default function LongMenu ({noteId, updateNotesList}) {
+export default function LongMenu ({noteId, updateNotesList, isDetailed}) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-  const handleClose = async() => {
+  const handleClose = async () => {
     setAnchorEl(null);
-    const updatedNotes=await keepService.deleteNote(noteId)
-    updateNotesList(updatedNotes)
+    const updatedNotes = await keepService.deleteNote(noteId);
+    updateNotesList(updatedNotes);
   };
 
   return (
-    <div>
+    <div className={`longMenu ${ isDetailed ? 'detailed' : '' }`}>
       <IconButton
         aria-label="more"
         id="long-button"

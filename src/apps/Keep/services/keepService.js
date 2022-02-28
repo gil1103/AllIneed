@@ -281,12 +281,12 @@ function _getDemoNotes() {
 			items: [
 				{
 					id: utilService.makeId(),
-					txt: 'play her favorite video',
+					txt: 'Play her favorite video',
 					isChecked: false
 				},
 				{
 					id: utilService.makeId(),
-					txt: 'remind everyone to call her',
+					txt: 'Remind everyone to call her',
 					isChecked: false
 				}
 			]
@@ -382,7 +382,7 @@ function _getDemoNotes() {
 			items: [
 				{
 					id: utilService.makeId(),
-					txt: 'keep on doing sport twice a week',
+					txt: 'Keep on doing sport twice a week',
 					isChecked: false
 				},
 				{
@@ -460,8 +460,8 @@ function _getDemoNotes() {
 				uploadedImage: ''
 			},
 			info: {
-				title: `Manager: welcome all. 
-					tell us about what you do in one line`
+				title: `Manager: Welcome all.\n tell us about what you do in one line`
+					
 			},
 			style: {
 				backgroundColor: 'lightgreen'

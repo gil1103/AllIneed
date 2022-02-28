@@ -212,7 +212,9 @@ export const NoteTodo = ({note, updateIsDetailedState, isNewList, updateNotesLis
         backgroundColor: backgroundColor, maxHeight: `${ windowHeight * 0.74 }px`,
         top: `${ isDetailed ? Math.round(noteTodoTopPercent * windowHeight) : '0' }px`,
         left: `${ isDetailed ? Math.round((windowWidth - 600) / 2 - 200) : '0' }px`,
-        border: `${ fileType === "video" ? 'none' : '1px solid #52616b' }`
+        border: `${ fileType === "video" ? 'none' : '1px solid #52616b' }`,
+        width:`${0.25*windowWidth}px`
+
       }}
       onMouseEnter={e => showButton(e)} onMouseLeave={e => hideButton(e)}>
       {!isPinned && <RiPushpin2Line className="pin" style={{
