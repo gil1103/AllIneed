@@ -3,6 +3,7 @@
 	grid-gap: 1rem;
 	grid-template-columns: 1fr 1fr 1fr;
 	margin: 1rem auto 1rem 1rem;
+	justify-items: center;
 }
 .book-list a {
 	color: white;
