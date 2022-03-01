@@ -8,6 +8,6 @@ via email or whatsup User can add color to organize notes which can be reached b
 Emails app: includes inbox, sent, drafts items which can be sorted/filltered by, key word/ asc/desc order or read/unread messages. 
 user receives notifactions on email sent/deleted/recieved and have the option to reply and compose new emails
 
-Books app: app presenting the google books (using google api), allows user to search books by keyword or category
+Books app: app presenting the google books (using google api), allows user to search books by keyword or category, read and add reviews
 
 https://gil1103.github.io/AllIneed/
