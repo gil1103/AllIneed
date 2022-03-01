@@ -1,8 +1,9 @@
+import React, { useEffect } from 'react';
 import {
 	BrowserRouter as Router,
 	Routes,
 	Route,
-	Navigate,
+	Navigate
 } from 'react-router-dom';
 import { HomePage } from './pages/HomePage';
 import { About } from './pages/About';
@@ -21,6 +22,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
 import { faStar as faStarSolid } from '@fortawesome/free-solid-svg-icons';
 import './index.css';
+
 export default function App() {
 	library.add(fab, faStarRegular, faStarSolid);
 
@@ -30,11 +32,7 @@ export default function App() {
 				<MainNav />
 				<UserMsg />
 				<Routes>
-					<Route
-						exact
-						path="/"
-						element={<Navigate replace to="/homepage" />}
-					/>
+					<Route path="/" element={<HomePage/>} />
 					<Route path="/homepage" element={<HomePage />} />
 					<Route path="/about" element={<About />} />
 					<Route path="/keep" element={<KeepApp />} />
@@ -48,9 +46,12 @@ export default function App() {
 						<Route path="/email/drafts" element={<EmailApp />} />
 					</Route>
 					<Route path="/email/:emailId" element={<EmailDetails />} />
+					<Route path="*" element={<Navigate to="/homepage" />} />
 				</Routes>
 				<Footer />
 			</section>
 		</Router>
 	);
 }
+
+{/* <Route path="/" element={<Navigate to="/homepage" />} /> */}
