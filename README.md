@@ -1,5 +1,6 @@
 # AllIneed
 This app incorporates 3 apps in one place:
+
 Notes app: this extensive app allow users to quickly capture what’s on their mind and get a reminder later at the right place or time. 
 Capture what’s on your mind: Add notes, lists, photos, videos, drawing with or w/o background image and share it with friends and family 
 via email or whatsup User can add color to organize notes which can be reached by a simple search.
