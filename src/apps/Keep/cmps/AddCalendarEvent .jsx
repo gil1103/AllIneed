@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import './AddCalendarEvent.css'
+import './AddCalendarEvent.css';
 // import {gapi} from 'gapi-script';
 
 //export a function that gets start time(date picker), location, name 

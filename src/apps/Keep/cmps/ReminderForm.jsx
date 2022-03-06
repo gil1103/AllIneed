@@ -40,7 +40,9 @@ export const ReminderForm = ({title, closeForm, bodyStr, isDetailed}) => {
     }
   ];
 
-  const onInputChange = ({target: {name, value}}) => {
+  const onInputChange = (ev) => {
+    ev.preventDefault();
+    const {target: {name, value}} = ev;
     setDateAndTime(oldValues => ({...oldValues, [name]: value}));
   };
 
