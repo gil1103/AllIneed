@@ -45,8 +45,8 @@ export const BookDetails = () => {
     <section className="book-container">
       {book.length === 0 && <h1>Loading...</h1>}
       <div className="books-pagination">
-        <AiFillCaretLeft onClick={() => onPagination('-1')} />
-        <AiOutlineCaretRight onClick={() => onPagination('1')} />
+        <AiFillCaretLeft style={{cursor:'pointer'}} onClick={() => onPagination('-1')} />
+        <AiOutlineCaretRight style={{cursor:'pointer'}} onClick={() => onPagination('1')} />
       </div>
       <div className="book-details">
         <div className="image-container">
