@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import {Link} from 'react-router-dom';
 import {useParams, useNavigate} from 'react-router-dom';
 import {bookService} from '../services/bookService';
 import {BookReviews} from './BookReviews';
@@ -62,7 +63,7 @@ export const BookDetails = () => {
           </div>
           <h3>Publication date: {fixedDate}</h3>
           <h4>Price: ${book.price}</h4>
-          <a href={`/book/${ book.id }/addreview`}>Write a review</a>
+          <Link to={`/book/${ book.id }/addreview`}>Write a review</Link>
           <div className="description-container">
             <span className="about-product">About this product</span>
             <span className="product-info">Product Information</span>
