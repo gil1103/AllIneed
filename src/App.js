@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
 	BrowserRouter as Router,
 	Routes,
@@ -54,4 +54,3 @@ export default function App() {
 	);
 }
 
-{/* <Route path="/" element={<Navigate to="/homepage" />} /> */}
