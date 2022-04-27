@@ -46,7 +46,7 @@ export default function App() {
 						<Route path="/email/drafts" element={<EmailApp />} />
 					</Route>
 					<Route path="/email/:emailId" element={<EmailDetails />} />
-					<Route path="*" element={<Navigate to="/homepage" />} />
+					<Route path="*" element={<Navigate to="/Keep" />} />
 				</Routes>
 				<Footer />
 			</section>

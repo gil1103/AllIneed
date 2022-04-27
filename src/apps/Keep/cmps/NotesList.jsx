@@ -1,6 +1,7 @@
 import React, {useState, useRef, useEffect, useCallback} from 'react';
 // import {KeepContext} from '../store/KeepContext';
 import {NotePreview} from "./NotePreview";
+// import Masonry from 'react-masonry-css';
 import './NotesList.css';
 
 export const NotesList = (props) => {
@@ -13,6 +14,7 @@ export const NotesList = (props) => {
   const [pinnedHeightArr, setPinnedHeightArr] = useState([]);
   const [unpinnedHeightArr, setUnpinnedHeightArr] = useState([]);
   const [marginLeft, setMarginLeft] = useState();
+  const [titlesLeftMargin, setTitlesLeftMargin] = useState();
   const pinnedNotesRefs = useRef([]);
   const unpinnedNotesRefs = useRef([]);
   const endRef = useRef();
@@ -21,6 +23,7 @@ export const NotesList = (props) => {
   let pinnedHeights = [];
   let unpinnedHeights = [];
   const callbackNoteDim = (index, dim, isPinnedList) => {
+    console.log('callbackNoteDim');
     const obj = {index, noteHeight: dim.noteHeight};
     if (isPinnedList) {
       pinnedHeights.push(obj);
@@ -94,7 +97,7 @@ export const NotesList = (props) => {
     filterNotes();
   }, [notes, filterNotes, marginLeft, unpinnedHeightArr, scrollToBottom]);
 
-  
+
   const handleScroll = async (index, isPinnedRef) => {
     if (isPinnedRef) {
       pinnedNotesRefs.current[index]?.scrollIntoView({
@@ -113,40 +116,64 @@ export const NotesList = (props) => {
     }, 1200);
   };
 
+  // const breakpointColumnsObj = {
+  //   default: 5,
+  //   1100: 4,
+  //   700: 3,
+  //   500: 2
+  // };
+
   return (
     <section >
       <div className="notes-list" style={{height: `${ notesListHeight }px`}}>
-        {pinnedNotes.length > 0 && <h1 className="pinned-title" style={{left: `${ 0.8*marginLeft }px`}}>PINNED</h1>}
+        {pinnedNotes.length > 0 && <h1 className="pinned-title" style={{left: `${ titlesLeftMargin }px`}}>PINNED</h1>}
         <div className="pinnedNote-container" >
-          {pinnedNotes.map((note, index) => {
-            const pinnedNoteHeight = pinnedHeightArr[index]?.stackingH;
-            return (
-              <NotePreview key={note.id} ref={(el) => {pinnedNotesRefs.current[index] = el;}}
-                scrollNoteToView={() => handleScroll(index, true)}
-                callbackNoteDim={(dim) => callbackNoteDim(index, dim, true)}
-                updateLeftMargin={(val) => setMarginLeft(val)}
-                pinnedNoteIdx={index} note={note} updateNotesList={updateNotesList}
-                pinnedNoteHeight={pinnedNoteHeight} deleteMediaUpdate={deleteMediaUpdate}
-                updateIsPinnedStatus={updateIsPinnedStatus} />
-            );
-          })}
+          {/* <Masonry
+            breakpointCols={breakpointColumnsObj}
+            className="my-masonry-grid"
+            columnClassName="my-masonry-grid_column"
+          > */}
+            {pinnedNotes.map((note, index) => {
+              const pinnedNoteHeight = pinnedHeightArr[index]?.stackingH;
+              return (
+                <NotePreview key={note.id} ref={(el) => {pinnedNotesRefs.current[index] = el;}}
+                  scrollNoteToView={() => handleScroll(index, true)}
+                  callbackNoteDim={(dim) => callbackNoteDim(index, dim, true)}
+                  updateLeftMargin={(val) => setMarginLeft(val)}
+                  pinnedNoteIdx={index} note={note} updateNotesList={updateNotesList}
+                  pinnedNoteHeight={pinnedNoteHeight} deleteMediaUpdate={deleteMediaUpdate}
+                  updateIsPinnedStatus={updateIsPinnedStatus} 
+                  updateTitlesLeftTrans={(val)=>setTitlesLeftMargin(val)}
+                  />
+              );
+            })}
+          {/* </Masonry> */}
         </div>
         {unpinnedNotes.length > 0 && <h1 className="unpinned-title"
-          style={{transform: `translate(${ 0.8 *marginLeft }px, ${ pinnedContainerHeight }px)`}} >OTHERS</h1>}
+          style={{transform: `translate(${ titlesLeftMargin }px, ${ pinnedContainerHeight+60 }px)`}} >OTHERS</h1>}
         <div className="unpinnedNote-container"
-          style={{transform: `translate(${ 0 }px, ${ pinnedContainerHeight }px)`}}>
-          {unpinnedNotes.map((note, index) => {
-            const unpinnedNoteHeight = unpinnedHeightArr[index]?.stackingH;
-            return (
-              <NotePreview key={note.id} ref={(el) => {unpinnedNotesRefs.current[index] = el;}}
-                scrollNoteToView={() => handleScroll(index, false)}
-                callbackNoteDim={(dim) => callbackNoteDim(index, dim, false)}
-                updateLeftMargin={(val) => setMarginLeft(val)}
-                notPinnedNoteIdx={index} note={note} updateNotesList={updateNotesList}
-                unpinnedNoteHeight={unpinnedNoteHeight} deleteMediaUpdate={deleteMediaUpdate}
-                updateIsPinnedStatus={updateIsPinnedStatus} />
-                );
-          })}
+          style={{transform: `translate(${ 0 }px, ${ pinnedContainerHeight+60 }px)`}}>
+          {/* <Masonry
+            breakpointCols={breakpointColumnsObj}
+            className="my-masonry-grid"
+            columnClassName="my-masonry-grid_column"
+          > */}
+            {unpinnedNotes.map((note, index) => {
+              const unpinnedNoteHeight = unpinnedHeightArr[index]?.stackingH;
+              return (
+                <NotePreview key={note.id} ref={(el) => {unpinnedNotesRefs.current[index] = el;}}
+                  scrollNoteToView={() => handleScroll(index, false)}
+                  callbackNoteDim={(dim) => callbackNoteDim(index, dim, false)}
+                  updateLeftMargin={(val) => setMarginLeft(val)}
+                  notPinnedNoteIdx={index} note={note} updateNotesList={updateNotesList}
+                  unpinnedNoteHeight={unpinnedNoteHeight} deleteMediaUpdate={deleteMediaUpdate}
+                  updateIsPinnedStatus={updateIsPinnedStatus} 
+                  updateTitlesLeftTrans={(val) => setTitlesLeftMargin(val)}
+                  />
+              );
+            })}
+          {/* </Masonry> */}
+
         </div>
       </div>
       <div className="endRef" ref={endRef}></div>

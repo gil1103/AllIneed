@@ -4,7 +4,9 @@ import './NotePreview.css';
 import {useWindowSize} from "./../../../services/useWindowSize";
 
 export const NotePreview = React.forwardRef((props, ref) => {
-  const {note, updateLeftMargin, updateNotesList, pinnedNoteIdx, notPinnedNoteIdx, callbackNoteDim, pinnedNoteHeight, unpinnedNoteHeight, scrollNoteToView, updateIsPinnedStatus, deleteMediaUpdate} = props;
+  const {note, updateLeftMargin, updateNotesList, pinnedNoteIdx, notPinnedNoteIdx, 
+    callbackNoteDim, pinnedNoteHeight, unpinnedNoteHeight, scrollNoteToView, 
+    updateIsPinnedStatus, deleteMediaUpdate, updateTitlesLeftTrans} = props;
   const [isDetailed, setIsDetailed] = useState(false);
   const [noteDimentions, setNoteDimentions] = useState();
   const [pinnedRowStackHeight, setPinnedRowStackHeight] = useState();
@@ -24,6 +26,8 @@ export const NotePreview = React.forwardRef((props, ref) => {
   const pinnedColumnCount = (pinnedNoteIdx) % itemsPerRow;
   const unpinnedColumnCount = (notPinnedNoteIdx) % itemsPerRow;
   const marginLeft = 1.2*(0.5 * (windowWidth - ((itemsPerRow * noteDimentions?.noteWidth) + (horizontalGap * (itemsPerRow - 1)))));
+
+  updateTitlesLeftTrans( marginLeft- horizontalGap / 2+22)
 
   const calculateTransX = useCallback(() => {
     if (note.isPinned) {
@@ -66,7 +70,8 @@ export const NotePreview = React.forwardRef((props, ref) => {
 
   return (
     <>
-      <section ref={ref} className={`note-preview ${ isDetailed ? 'detailed' : '' }`} style={{transform: `translate(${ translateX }, ${ translateY } )`}}>
+      <section ref={ref} className={`note-preview ${ isDetailed ? 'detailed' : '' }`} 
+        style={{transform: `translate(${ translateX }, ${ translateY } )`}}>
         {isDetailed && <div className="noteOverlay"></div>}
         <NoteTodo note={note} updateIsDetailedState={updateIsDetailedState} updateNotesList={updateNotesList}
           setNoteDims={setDim} scrollNoteToView={scrollNoteToView} 
